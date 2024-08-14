@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Teaching"
+const allPosts = await Astro.glob('../pages/teaching/*.md');
+---
+<!---
+Should contain:
+- convenient way to update teaching from various markdown files
+- short summaries?
+--> 
+
+<BaseLayout pageTitle={pageTitle}>
+<h2>Here we want a list of links to study groups</h2>
+
+<ul>
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+</ul>
+</BaseLayout>
+
