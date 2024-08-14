@@ -1,12 +1,3 @@
-	---
-title: 'Teaching'
-pubDate: 'Wed 14 Aug 2024 15:07:59 BST'
-description: 'Teaching experience'
-author: 'Håvard'
-tags: ["astro", "blogging", "learning in public"]
-layout: ../../layouts/MarkdownPostLayout.astro
---- 
-
 ## 2023-2024 
 + August: Instructor in TOPS Summer school in Oxford
 + Trinity term 2024: Tutor in Part A: Group Theory
