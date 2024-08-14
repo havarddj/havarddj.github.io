@@ -1,9 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
-
+const pageTitle = "Håvard Damm-Johnsen";
+import * as bio from './bio.md'
 ---
-
+<!--
+TODO: Include:
+- [ ] photo
+- [ ] bio
+- [ ] Fix link css style
+- [ ] center stuff?
+- [ ] last updated date
+-->
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <!-- <h2></h2> -->
+  <Fragment set:html={bio.compiledContent()}/>
 </BaseLayout>

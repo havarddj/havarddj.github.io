@@ -1,7 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Teaching"
-const allPosts = await Astro.glob('../pages/teaching/*.md');
+
+const pageTitle = "";
+const allPosts = await Astro.glob('../pages/teaching/*study_group.md');
+
+import * as classes from '../pages/teaching/classes.md';
 ---
 <!---
 Should contain:
@@ -10,10 +13,21 @@ Should contain:
 --> 
 
 <BaseLayout pageTitle={pageTitle}>
-<h2>Here we want a list of links to study groups</h2>
+
+
+<h2>Study groups</h2>
 
 <ul>
     {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
 </ul>
+
+<h2>Teaching experience</h2>
+<Fragment set:html={classes.compiledContent()}/>
+
+  <!-- {(classes.compiledContent)} -->
+<!-- <ul> -->
+<!--     {class_headings.map((heading) => <li> {printClassHeading(heading)}</li>)} -->
+<!-- </ul> -->
+
 </BaseLayout>
 

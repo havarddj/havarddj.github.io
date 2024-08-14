@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const { frontmatter } = Astro.props;
+const { frontmatter, headings } = Astro.props;
+
 // TODO: include dynamic list of study groups, table of contents?
 ---
 <BaseLayout pageTitle={frontmatter.title}>

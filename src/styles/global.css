@@ -19,6 +19,16 @@ html {
   /* font-family: sans-serif; */
 }
 
+html.dark {
+  background-color: #;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -34,7 +44,7 @@ body {
 
 h1 {
   margin: 1rem 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: 'Cormorant Garamond', serif;
   color: var(--brown);
@@ -91,7 +101,7 @@ h2 {
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: var(--brown);
   /* text-transform: uppercase; */

@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Papers from '../components/Papers.astro';
 const pageTitle = "Work page"
+import * as papers from '../pages/papers.md'
+import * as projects from  '../pages/projects.md'
 ---
 <!---
 Should contain:
@@ -8,8 +11,15 @@ Should contain:
 - short summaries?
 --> 
 
-<BaseLayout pageTitle={pageTitle}>
-<h2>Publications & preprints </h2>
-<p> And this is a paragraph. Now this is something, isn't it? </p>
+<BaseLayout >
+  <h2>Publications & preprints </h2>
+
+
+  <Fragment set:html={papers.compiledContent()}/>
+
+
+  <h2> Code & other projects</h2>
+  <Fragment set:html={projects.compiledContent()}/>
+
 </BaseLayout>
 
