@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.8.2"
+    "astro": "^4.8.2",
+    "dayjs": "^1.11.12",
+    "katex": "^0.16.11",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^6.0.0"
   }
 }

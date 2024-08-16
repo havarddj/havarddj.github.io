@@ -1,17 +1,36 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Håvard Damm-Johnsen";
-import * as bio from './bio.md'
+import * as bio from './bio.md';
+import portrait from '../../src/resources/portrait.jpg';
+import { Image } from 'astro:assets';
 ---
 <!--
 TODO: Include:
-- [ ] photo
-- [ ] bio
-- [ ] Fix link css style
+- [x] photo
+- [x] bio
+- [x] Fix link css style
 - [ ] center stuff?
 - [ ] last updated date
+- [ ] fix study groups
+- [ ] add CV etc
+- [ ] fix hamburger menu for mobile layouts
 -->
-<BaseLayout pageTitle={pageTitle}>
+
+<BaseLayout>
   <!-- <h2></h2> -->
-  <Fragment set:html={bio.compiledContent()}/>
+
+  <main class="content">
+    <div class="bio">
+      <div class="header">
+      <h1>Håvard Damm-Johnsen</h1>
+      </div>
+	 <Fragment set:html={bio.compiledContent()}/>
+       </div>
+       
+       <div class="photo">
+	 <Image src={portrait} alt="Håvard Damm-Johnsen" class="portrait">
+       </div>
+  </main>
+
 </BaseLayout>

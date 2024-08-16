@@ -2,11 +2,23 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 const { frontmatter, headings } = Astro.props;
 
-// TODO: include dynamic list of study groups, table of contents?
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
+const lastModified = dayjs()
+  .utc(Astro.props.frontmatter.lastModified)
+  .format("DD MMMM YYYY");
+//TODO: include dynamic list of study groups, table of contents?
 ---
+
 <BaseLayout pageTitle={frontmatter.title}>
-<p>Written by {frontmatter.author}</p>
-<p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
-<hr/>
-<slot />
+  </p>
+  <!-- <hr/> -->
+  <slot />
+  <hr/>
+  
+  <p style="text-align:right"> <em> Last updated: {lastModified}</em></p>
+
 </BaseLayout>
