@@ -5,9 +5,13 @@ import Hamburger from "../components/Hamburger.astro";
 import { Image } from 'astro:assets';
 import spec from '../../src/resources/x7+41.svg';
 ---
+
 <header>
 <div class="container">
-<Image src={spec} alt="Spectrum of ring of integers of x^7 + 41" width="100%" class="spec">
+  <Image src={spec}
+    alt="Spectrum of ring of integers of x^7 + 41"
+    title="Spectrum of ring of integers of x^7 + 41"
+    width="100%" class="spec">
 <nav>
 </div>
 <Hamburger/>
