@@ -11,11 +11,14 @@ const lastModified = dayjs()
   .utc(Astro.props.frontmatter.lastModified)
   .format("DD MMMM YYYY");
 //TODO: include dynamic list of study groups, table of contents?
+
 ---
 
+
 <BaseLayout pageTitle={frontmatter.title}>
+  <p class="study-grp-desc"> ({Astro.props.frontmatter.description})
   </p>
-  <!-- <hr/> -->
+  <hr/>
   <slot />
   <hr/>
   

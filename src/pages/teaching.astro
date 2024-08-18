@@ -1,15 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import {postYear} from '../scripts/post-year.js';
 
 const pageTitle = "";
-const allPosts = await Astro.glob('../pages/teaching/*study_group.md');
+const studyGroups = await Astro.glob('../pages/teaching/*study_group.md');
+
+studyGroups.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
 
 import * as classes from '../pages/teaching/classes.md';
+
+
+function postDescr (post) {
+  var d = new Date(Date.parse(post.frontmatter.pubDate));
+  return d.getFullYear()
+}
 ---
 <!---
 Should contain:
 - convenient way to update teaching from various markdown files
 - short summaries?
+
+
+Here's how to add more study groups: make a markdown file here,
+then add all the auxiliary files in a suitable directory in 'public',
+otherwise they can't be found after astro compiles
 --> 
 
 <BaseLayout pageTitle={pageTitle}>
@@ -18,7 +33,7 @@ Should contain:
 <h2>Study groups</h2>
 
 <ul>
-    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    {studyGroups.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a>  ({postDescr(post)}) </li>)}
 </ul>
 
 <h2>Teaching experience</h2>

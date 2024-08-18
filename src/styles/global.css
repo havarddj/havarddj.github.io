@@ -17,7 +17,8 @@
 
 
 html {
-    background-color: #eee;
+    /* background-color: #f4f3f2; */
+    background-color: #fff;
     transition: background-color .5s;
   /* font-family: sans-serif; */
 }
@@ -134,15 +135,50 @@ h2 {
   display: unset;
 }
 
+
+/* lists */
+ol {
+    display: block;
+    margin-left: -10px;
+}
 ul {
-    list-style: none;
-    padding: 0px;
+    display: block;
+    list-style: bullet;
+    /* padding: 0px; */
+    margin-left: -10px;
+
+}
+
+ul li {
+    display: block;
+    position: relative;
+}
+
+ol li {
+    left: -20px;
 }
 
 ul li:before {
-    content: '\2197';
-    margin: 0 1em;    /* any design */
+
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -20px;
+  margin-top: -.7em;
+  background: var(--brown);
+  stroke: #111;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%; 
 }
+
+.dark ul li:before {
+    background: var(--almond);
+}
+ul li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
 img {
     display: none;
 }
@@ -307,4 +343,28 @@ header {
 
     filter: drop-shadow();
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 70px 290px 0px; */
+}
+
+/* table etc */
+table, th, td {
+  border: 1px solid #eeeeee;
+  border-collapse: collapse;
+  padding: 10px;
+  /* width: 100%; */
+}
+table {
+    width: 100%;
+    margin-top: 2em;
+
+}
+.dark table,th,td {
+  border: 1px solid #ddd;
+  /* border-collapse: collapse; */
+  /* padding: 10px; */
+  /* width: 100%; */
+    
+}
+
+p.study-grp-desc {
+    /* color: var(--brown); */
 }
