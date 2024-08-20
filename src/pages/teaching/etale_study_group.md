@@ -6,7 +6,7 @@ author: 'Håvard'
 layout: ../../layouts/MarkdownPostLayout.astro
 --- 
 
-## Étale cohomology learning seminar
+<!-- ## Étale cohomology learning seminar -->
 
 Étale cohomology was developed by M. Artin and A. Grothendieck in
 the early 60s, with the aim of producing a good intrinsic cohomology

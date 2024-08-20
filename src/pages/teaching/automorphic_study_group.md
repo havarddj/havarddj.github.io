@@ -10,7 +10,7 @@ tags: ["astro", "blogging", "learning in public"]
 layout: ../../layouts/MarkdownPostLayout.astro
 --- 
 
-## Automorphic representations learning seminar
+<!-- ## Automorphic representations learning seminar -->
 
 This is a learning seminar mainly intended for masters and graduate
 students at Oxford, but everyone is welcome! If you have any questions,
@@ -39,7 +39,7 @@ probably have to go beyond Hilary term if we want to cover all of them.
 | 1. Algebraic groups and adeles                | Mick     | [notes](autom/notes.pdf#page=1)  |
 | 2. Non-archimedean theory of automorphic reps | Zach     | [notes](autom/notes.pdf#page=4)  |
 | 3. The Satake isomorphism                     | Håvard   | [notes](autom/notes.pdf#page=7)  |
-| 4. Local Langlands correspondence             | Zach     | [notes](autom/notes.pdf#page=10) |
+| w4. Local Langlands correspondence            | Zach     | [notes](autom/notes.pdf#page=10) |
 | 5. Archimedean theory of automorphic reps     | James N. | [notes](autom/notes.pdf#page=12) |
 | 6. Automorphic representations                | Alex     | [notes](autom/notes.pdf#page=15) |
 | 7. The case of GL2/Q and modular forms        | Arun     | [notes](autom/notes.pdf#page=17) |
