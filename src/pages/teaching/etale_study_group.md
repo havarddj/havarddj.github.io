@@ -32,25 +32,25 @@ set aside some time to discuss exercises **(Tuesdays after talk)**.
 
 Thanks to [Martin Gallauer](https://homepages.warwick.ac.uk/staff/Martin.Gallauer/index.html) for
 writing up a detailed programme for the first few weeks
-[here](./etale-coh/TT21-etale-program.pdf)! 
+[here](/etale-coh/TT21-etale-program.pdf)! 
 
 
 | Topic                                            | Speaker                   | Notes                                                                             | Exercises                                    |
 |--------------------------------------------------|---------------------------|-----------------------------------------------------------------------------------|----------------------------------------------|
-| 1. Introduction                                  | Martin G.                 | [Typed](./etale-coh/Intro_notes.pdf), [Handwritten](./etale-coh/Martins%20Weil%20conjectures%20notes.pdf) | [Problem set 1](./etale-coh/ex_sheet1.pdf)               |
-| 2. Étale morphisms                               | Andrés, Håvard            | [Typed](./etale-coh/Morphisms_notes.pdf)                                                      | [Problem set 2](./etale-coh/ex_sheet2.pdf)               |
-| 3. Étale sheaves                                 | Martin O., Jay, Martin G. | [Typed](./etale-coh/Sites_notes.pdf), [Slides](./etale-coh/martins_slides.pdf)                            | [Problem set 3](./etale-coh/ex_sheet3.pdf)               |
-| 4. Operations on sheaves                         | Eduardo                   | [Typed](./etale-coh/Sites_notes2.pdf)                                                         | [Problem set 4](./etale-coh/ex_sheet4.pdf)               |
-| 5. Cohomology                                    | Lukas, George R.          | [Slides](./etale-coh/Lukas_slides.pdf), [Typed](./etale-coh/cohom.pdf)                                    | [Problem set 5](./etale-coh/ex_sheet5.pdf)               |
-| 6. First computations                            | George C., Mike           | [Slides](./etale-coh/Mikes_slides.pdf), [Typed](./etale-coh/compu.pdf)                                    | [Problem set 6](./etale-coh/ex_sheet6.pdf)               |
-| 7. Cohomology of curves                          | Håvard, Andrés, Mike      | [Typed](./etale-coh/curves.pdf)                                                               | [PS 7](./etale-coh/ex_sheet7.pdf), [PS 8](./etale-coh/ex_sheet8.pdf) |
-| 8. Proper & smooth base change                   | Wojtek, Martin O.         | Slides [1,](./etale-coh/Wojtek_slides1.pdf) [2](./etale-coh/Wojtek_slides2.pdf)                           | [Problem set 9](./etale-coh/ex_sheet9.pdf)               |
+| 1. Introduction                                  | Martin G.                 | [Typed](/etale-coh/Intro_notes.pdf), [Handwritten](/etale-coh/Martins%20Weil%20conjectures%20notes.pdf) | [Problem set 1](/etale-coh/ex_sheet1.pdf)               |
+| 2. Étale morphisms                               | Andrés, Håvard            | [Typed](/etale-coh/Morphisms_notes.pdf)                                                      | [Problem set 2](/etale-coh/ex_sheet2.pdf)               |
+| 3. Étale sheaves                                 | Martin O., Jay, Martin G. | [Typed](/etale-coh/Sites_notes.pdf), [Slides](/etale-coh/martins_slides.pdf)                            | [Problem set 3](/etale-coh/ex_sheet3.pdf)               |
+| 4. Operations on sheaves                         | Eduardo                   | [Typed](/etale-coh/Sites_notes2.pdf)                                                         | [Problem set 4](/etale-coh/ex_sheet4.pdf)               |
+| 5. Cohomology                                    | Lukas, George R.          | [Slides](/etale-coh/Lukas_slides.pdf), [Typed](/etale-coh/cohom.pdf)                                    | [Problem set 5](/etale-coh/ex_sheet5.pdf)               |
+| 6. First computations                            | George C., Mike           | [Slides](/etale-coh/Mikes_slides.pdf), [Typed](/etale-coh/compu.pdf)                                    | [Problem set 6](/etale-coh/ex_sheet6.pdf)               |
+| 7. Cohomology of curves                          | Håvard, Andrés, Mike      | [Typed](/etale-coh/curves.pdf)                                                               | [PS 7](/etale-coh/ex_sheet7.pdf), [PS 8](/etale-coh/ex_sheet8.pdf) |
+| 8. Proper & smooth base change                   | Wojtek, Martin O.         | Slides [1,](/etale-coh/Wojtek_slides1.pdf) [2](/etale-coh/Wojtek_slides2.pdf)                           | [Problem set 9](/etale-coh/ex_sheet9.pdf)               |
 | 9. Finiteness theorems                           | Martin G.                 |                                                                                   |                                              |
-| 10. Cohomological purity, cycle classes          | Andres, Eduardo           | [Notes](./etale-coh/Andres_notes.pdf) , [notes](./etale-coh/Eduardo_notes.pdf)                            | [Problem set 10](./etale-coh/ex_sheet10.pdf)             |
+| 10. Cohomological purity, cycle classes          | Andres, Eduardo           | [Notes](/etale-coh/Andres_notes.pdf) , [notes](/etale-coh/Eduardo_notes.pdf)                            | [Problem set 10](/etale-coh/ex_sheet10.pdf)             |
 | 11. Poincaré duality and Lefschetz trace formula | Jay, Martin O.            |                                                                                   |                                              |
-| 12. The Weil conjectures                         | Håvard                    | [Slides](./etale-coh/Weil.pdf)                                                                | [Problem set 11](./etale-coh/ex_sheet11.pdf)             |
+| 12. The Weil conjectures                         | Håvard                    | [Slides](/etale-coh/Weil.pdf)                                                                | [Problem set 11](/etale-coh/ex_sheet11.pdf)             |
 
-A PDF containing all the notes so far can be found [here](./etale-coh/main.pdf).
+A PDF containing all the notes so far can be found [here](/etale-coh/main.pdf).
 Comments, corrections and criticisms are most welcome!
 
 ## Resources and references:

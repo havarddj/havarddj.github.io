@@ -36,17 +36,17 @@ probably have to go beyond Hilary term if we want to cover all of them.
 
 | Topic                                         | Speaker  | Notes                              |
 |-----------------------------------------------|----------|------------------------------------|
-| 1. Algebraic groups and adeles                | Mick     | [notes](./autom/notes.pdf#page=1)  |
-| 2. Non-archimedean theory of automorphic reps | Zach     | [notes](./autom/notes.pdf#page=4)  |
-| 3. The Satake isomorphism                     | Håvard   | [notes](./autom/notes.pdf#page=7)  |
-| 4. Local Langlands correspondence             | Zach     | [notes](./autom/notes.pdf#page=10) |
-| 5. Archimedean theory of automorphic reps     | James N. | [notes](./autom/notes.pdf#page=12) |
-| 6. Automorphic representations                | Alex     | [notes](./autom/notes.pdf#page=15) |
-| 7. The case of GL2/Q and modular forms        | Arun     | [notes](./autom/notes.pdf#page=17) |
+| 1. Algebraic groups and adeles                | Mick     | [notes](/autom/notes.pdf#page=1)  |
+| 2. Non-archimedean theory of automorphic reps | Zach     | [notes](/autom/notes.pdf#page=4)  |
+| 3. The Satake isomorphism                     | Håvard   | [notes](/autom/notes.pdf#page=7)  |
+| 4. Local Langlands correspondence             | Zach     | [notes](/autom/notes.pdf#page=10) |
+| 5. Archimedean theory of automorphic reps     | James N. | [notes](/autom/notes.pdf#page=12) |
+| 6. Automorphic representations                | Alex     | [notes](/autom/notes.pdf#page=15) |
+| 7. The case of GL2/Q and modular forms        | Arun     | [notes](/autom/notes.pdf#page=17) |
 
 
 A PDF containing all the notes so far can be found
-[here](./autom/notes.pdf). Comments, corrections and criticisms are most
+[here](/autom/notes.pdf). Comments, corrections and criticisms are most
 welcome!
 
 ## Resources and references:
