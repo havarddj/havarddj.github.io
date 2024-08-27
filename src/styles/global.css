@@ -34,7 +34,8 @@ html.dark {
 
 
 body {
-    margin: 0 auto;
+    margin-top: 1rem;
+    /* margin: 0 auto; */
     width: 100%;
     max-width: 80ch;
     padding: 1rem;
@@ -149,7 +150,7 @@ h2 {
     /* padding: 5px 5px; */
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--brown);
 }
@@ -291,6 +292,7 @@ img.spec {
 	white-space: nowrap;
 	max-height: 1000px;
 	z-index: 2;
+	
     }
 
     .nav-links a {
@@ -298,6 +300,8 @@ img.spec {
 	padding: 15px 20px;
 	background: none;
 	z-index: 1;
+	font-size: 1.3rem;
+
 	/* pointer-events: none; */
     }
     .hamburger {
