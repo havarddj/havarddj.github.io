@@ -6,7 +6,7 @@ const { pageTitle } = Astro.props;
 <html lang="en">
   <head>
     <!-- toggle dark mode -->
-<script is:inline>
+    <script is:inline>
   const theme = (() => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
       return localStorage.getItem('theme');
@@ -35,6 +35,7 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
+    <br/>
     <h1>{pageTitle}</h1>
     <slot />
 
