@@ -4,7 +4,7 @@ A simple script building on [pytikz](https://github.com/allefeld/pytikz) to draw
 + [typst-preview.el](https://github.com/havarddj/typst-preview.el) \
 An Emacs package for live preview of [Typst](https://typst.app/), a modern LaTeX alternative.
 
-+ [tree-sitter-sage](https://github.com/havarddj/tree-sitter-sage) \ 
++ [tree-sitter-sage](https://github.com/havarddj/tree-sitter-sage) \
 A tree-sitter grammar for SageMath, which is a slight modification of [tree-sitter-python](https://github.com/tree-sitter/tree-sitter-python).
 
 + [WCLvsSCL](https://github.com/havarddj/WCLvsSCL) \
