@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-/* colors: */
 :root {
+    /* colors: */
     --violet:#846b8a; 
     --purple: #494b7e;
     --almond:#e0d2c3;
@@ -13,6 +13,19 @@
     --brown:#551b14;
     --slate:#2b2b30;
     --charcoal:#333842;
+    /* lengths */
+    --margin-tiny: .3em;
+    --margin-small: .5em;
+    --margin-medium: 1em;
+    --margin-big: 3em;
+    --margin-huge: 5em;
+}
+/* lobotomized owl targets elements which are not the first child
+  so perfect for adding spacing between elements */
+* + * {
+    margin-top: var(--margin-medium);
+    /* text-indent: 2em; */
+
 }
 
 
@@ -175,20 +188,24 @@ h2 {
 
 
 /* lists */
+li + li {
+    margin-top: var(--margin-small);
+    
+}
 ol {
     display: block;
     margin-left: -10px;
 }
+
 ul {
     display: block;
-    list-style: bullet;
+    list-style: circle;
     /* padding: 0px; */
     margin-left: -10px;
-
 }
 
 ul li {
-    display: block;
+    /* display: block; */
     position: relative;
 }
 
@@ -196,25 +213,13 @@ ol li {
     left: -20px;
 }
 
-ul li:before {
-
-    content: "";
-    position: absolute;
-    top: 1.2em;
-    left: -20px;
-    margin-top: -.7em;
+ul li::before {
+    list-style-type: circle;
     background: var(--brown);
-    stroke: #111;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%; 
 }
 
 .dark ul li:before {
     background: var(--almond);
-}
-ul li:not(:last-child) {
-    margin-bottom: 4px;
 }
 
 img.spec {
@@ -280,7 +285,7 @@ img.spec {
 	position: absolute;	/* otherwise nav-links moves image down!*/
 	overflow: hidden;
 
-	top: 7.5rem;
+	top: 6.9rem;
 	left: 50%;
 	
 	/* width: auto; */
@@ -408,11 +413,13 @@ a:active {
 
 header {
     text-align: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 .bio {
     flex: 2.5;
-    padding-right: 20px;
+    padding-right: var(--margin-big);
+    /* padding-left: var(--margin-big); */
+    /* text-align: top; */
 }
 
 .photo {
