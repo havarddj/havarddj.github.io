@@ -13,7 +13,9 @@ The aim is to understand the paper [Rigid meromorphic cocycles for orthogonal gr
 
 ## Schedule
 
-We will meet on **Thursdays 10:30 in Room ??**, apart from the first talk, which will be Friday at noon + $\epsilon$.
+We will meet on **Thursdays 10:30 in the seminar room**, with the following exceptions: 
+- the first talk will be Friday at noon + $\epsilon$ 
+- the talk on November 14th will be in the admin conference room due to a conference
 
 Below is a tentative plan for the talks.
 
