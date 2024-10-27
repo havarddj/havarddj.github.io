@@ -5,7 +5,7 @@
 
 ## 2022-2023
 + Michael Curran and I ran the [Oxford Junior Number Theory seminar](https://www.maths.ox.ac.uk/groups/number-theory/junior-number-theory-seminar)
-+ Hilary term 2023: [Zach](https://zachary-feng.github.io/) and I ran a [study group on automorphic representations](automorphic_study_group.md)
++ Hilary term 2023: [Zach](https://zachary-feng.github.io/) and I ran a [study group on automorphic representations](automorphic_study_group)
 + Hilary term 2023: Tutor in Prelims: Linear algebra II
 + Michaelmas term 2022: Tutor in Prelims: Linear algebra and Geometry
 
