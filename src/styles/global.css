@@ -67,7 +67,7 @@ p {
 }
 
 h1 {
-    margin: 1rem 0;
+    margin-top: 0rem;
     font-size: 2rem;
     font-weight: 500;
     font-family: 'Cormorant Garamond', serif;
@@ -253,6 +253,18 @@ img.spec {
 
 /* When display is big:*/
 @media screen and (min-width: 636px) {
+    /* .bio { */
+    /* 	min-width: 40vw; */
+
+    /* } */
+
+    /* .photo { */
+    /* 	/\* flex: 1; *\/ */
+    /* 	min-width: 10px; */
+    /* 	max-width: 300px; */
+    /* } */
+
+
     .nav-rule {
 	display: none;
     }
@@ -407,24 +419,41 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* Bio section */
 
 header {
     text-align: center;
-    /* margin-bottom: 2rem; */
+    /* margin-bottom: -1rem; */
 }
+
+.contact-deets {
+    margin-top: 0em;
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+}
+.dark .contact-deets {
+    color: var(--violet);
+}
+
 .bio {
-    flex: 2.5;
+    margin-top: 0rem;
     padding-right: var(--margin-big);
+    flex: 2;
+    max-width: min(100vw, 50ch);
     /* padding-left: var(--margin-big); */
     /* text-align: top; */
 }
 
 .photo {
+    /* flex: 1; */
     flex: 1;
-    text-align: center;
+    max-width: 25%;
+    min-width: 200px;
 }
 
 /* Style for the image */
@@ -461,4 +490,10 @@ table {
 
 p.study-grp-desc {
     /* color: var(--brown); */
+}
+
+footer {
+    margin-top: 3em;
+    text-align: center;
+    
 }

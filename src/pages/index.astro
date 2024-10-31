@@ -25,17 +25,19 @@ TODO: Include:
 -->
 
 <BaseLayout>
-  <!-- <h2></h2> -->
-
   <main class="content">
     <div class="bio">
       <div class="header">
-      <h1>Håvard Damm-Johnsen</h1>
+	<h1>Håvard Damm-Johnsen</h1>
+	<p class="contact-deets">
+	  havard-dj "at" proton "dot" me (<a href="/cv.pdf">CV</a>, <a href="https://github.com/havarddj">github</a>)
+	</p>
+	
       </div>
-	 <Fragment set:html={bio.compiledContent()}/>
-       </div>
+      <Fragment set:html={bio.compiledContent()}/>
+    </div>
        
-       <div class="photo">
+    <div class="photo">
 	 <Image src={portrait} alt="Håvard Damm-Johnsen" class="portrait">
        </div>
   </main>

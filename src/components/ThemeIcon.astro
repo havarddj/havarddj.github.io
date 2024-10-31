@@ -13,19 +13,26 @@
 
 <script>
 
+function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  element = document.documentElement;
+  if (themeName === "dark") {
+    element.classList.add("dark");
+  } else if (themeName === "light") {
+    element.classList.remove("dark");    
+  } else {
+    console.log("Error: tried to apply invalid theme: " + themeName);
+  }
+};
+
 const handleToggleClick = () => {
 
   const element = document.documentElement;
   const isDark = element.classList.contains("dark");
-  
-  if (isDark) {
-    element.classList.remove("dark");
-  } else {
-    element.classList.add("dark");
-  };
-}
+  setTheme(isDark ? "light" : "dark");
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleToggleClick);
+  console.log("enabled theme: " + localStorage.getItem('theme'));
+}
 
 document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
 </script>
