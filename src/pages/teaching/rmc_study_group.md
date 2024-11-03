@@ -17,7 +17,7 @@ We will meet on **Thursdays 10:30 in the seminar room**, with the following exce
 - the first talk will be Friday at noon + $\epsilon$ 
 - the talk on November 14th will be in the admin conference room due to a conference
 
-Below is a tentative plan for the talks.
+Below is a tentative plan for the talks. 
 
 | Topic                                                        | Speaker   | Notes |
 |--------------------------------------------------------------|-----------|-------|
@@ -28,6 +28,7 @@ Below is a tentative plan for the talks.
 | 5. Rigid meromorphic cocycles                                | Hohto     | notes |
 | 6. $p$-adic Borcherds lifts                                  | Yingkun   | notes |
 
+Rough typed-up notes from the lectures can be found [here](/rmcs/rmc-notes.pdf).
 
 ## Resources and references:
 
@@ -35,5 +36,5 @@ The main reference is the original paper.
 Additionally, the following references might be useful:
 - Darmon-Vonk: [Singular moduli for real quadratic fields](https://www.math.mcgill.ca/darmon/pub/Articles/Research/69.DV1/paper.pdf)
 - Gehrmann: [On quaternionic rigid meromorphic cocycles](https://arxiv.org/abs/2009.04957)
-- Soeren Sprehe: [Classification & evaluation of rigid cocycles for $\mathrm{SL}(2,\mathbb{Z}[1/p])$](https://drive.google.com/file/d/18WEA4C1gp3NMKFuhyXm_p2k4A_FJDBSL/view)
+- Soeren Sprehe: [Classification & evaluation of rigid cocycles for SL2(Z[1/p])](https://drive.google.com/file/d/18WEA4C1gp3NMKFuhyXm_p2k4A_FJDBSL/view)
 
