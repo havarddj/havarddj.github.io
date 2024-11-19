@@ -21,7 +21,7 @@ Below is a tentative plan for the talks.
 
 | Topic                                                        | Speaker   | Notes |
 |--------------------------------------------------------------|-----------|-------|
-| 1. Primer of rigid meromorphic cocycles for $\mathrm{SL}(2)$ | Håvard    | notes |
+| 1. Primer of rigid meromorphic cocycles for SL2 | Håvard    | notes |
 | 2. Orthogonal groups & their symmetric spaces                | Pengcheng | notes |
 | 3. Special cycles                                            | Yingkun   | notes |
 | 4. Kudla-Millson divisors                                    | Mike      | notes |
