@@ -28,6 +28,9 @@
 
 }
 
+* + br {
+    margin-top: 0em;
+}
 
 html {
     /* background-color: #f4f3f2; */
