@@ -2,9 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const pageTitle = "Spectra of number fields"
 import './spec.css';
-import { Image } from 'astro:assets';
-import portrait from '../../src/.jpg';
-
 ---
 <BaseLayout>
 <h2>Gaga pictures for number fields<h2/>
@@ -120,10 +117,10 @@ import portrait from '../../src/.jpg';
     const selectedNumber = e.target.value;
     
     // Update each visualization with the new dataset number
-    document.getElementById('barcode-viz').data = `/barcode${selectedNumber}.svg`;
-    document.getElementById('spiral-viz').data = `/spiral${selectedNumber}.svg`;
-    document.getElementById('cutoff-viz').data = `/cutoff${selectedNumber}.svg`;
-    document.getElementById('boring-viz').data = `/boring${selectedNumber}.svg`;
+    document.getElementById('barcode-viz').data = `/misc/barcode${selectedNumber}.svg`;
+    document.getElementById('spiral-viz').data = `/misc/spiral${selectedNumber}.svg`;
+    document.getElementById('cutoff-viz').data = `/misc/cutoff${selectedNumber}.svg`;
+    document.getElementById('boring-viz').data = `/misc/boring${selectedNumber}.svg`;
   });
 </script>
 </BaseLayout>
