@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const pageTitle = "Spectra of number fields"
+import './spec.css';
+import { Image } from 'astro:assets';
+
+---
+<BaseLayout>
+<h2>Gaga pictures for number fields<h2/>
+<style>
+* + * {
+    margin-top: 0em;
+}
+
+  .viz-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .dataset-selector {
+    margin-bottom: 2rem;
+    width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #582e1c;
+    border-radius: 0.25rem;
+    background-color: white;
+    color: #582e1c;
+    font-family: inherit;
+  }
+  .dataset-selector .dark {
+    background-color: black;
+    color: white;
+  }
+
+  .viz-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .viz-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .viz-card {
+    border: 1px solid rgba(88, 46, 28, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+.dark .viz-card{
+    background-color: #123123;
+  }
+
+  .viz-title {
+    margin-bottom: 1rem;
+    color: #582e1c;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .viz-content {
+    aspect-ratio: 1;
+    flex-grow: 1;
+  }
+
+  .viz-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+</style>
+
+<div class="viz-container">
+  <select class="dataset-selector" id="datasetSelect">
+    <option value="1">1.1.1.1</option>
+    <option value="2">2.0.3.1</option>
+    <option value="3">7.1.3911915096945863.1</option>
+    <option value="4">10.2.160801029712.1</option>
+    <option value="5">45.1.246012870627780535441003976786240313709044401656133556774425683161984460829.1</option>
+  </select>
+
+<div class="viz-grid">
+    <div class="viz-card">
+      <h3 class="viz-title">Barcode</h3>
+      <div class="viz-content">
+        <object class="viz-svg" id="barcode-viz" type="image/svg+xml" data="barcode1.svg"></object>
+      </div>
+    </div>
+    <div class="viz-card">
+      <h3 class="viz-title">Spiral</h3>
+      <div class="viz-content">
+        <object class="viz-svg" id="spiral-viz" type="image/svg+xml" data="spiral1.svg"></object>
+      </div>
+    </div>
+    <div class="viz-card">
+      <h3 class="viz-title">Cutoff of spec</h3>
+      <div class="viz-content">
+        <object class="viz-svg" id="cutoff-viz" type="image/svg+xml" data="cutoff1.svg"></object>
+      </div>
+    </div>
+    <div class="viz-card">
+      <h3 class="viz-title">Cutoff of spec with embeddings</h3>
+      <div class="viz-content">
+        <object class="viz-svg" id="boring-viz" type="image/svg+xml" data="boring1.svg"></object>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('datasetSelect').addEventListener('change', function(e) {
+    const selectedNumber = e.target.value;
+    
+    // Update each visualization with the new dataset number
+    document.getElementById('barcode-viz').data = `./barcode${selectedNumber}.svg`;
+    document.getElementById('spiral-viz').data = `./spiral${selectedNumber}.svg`;
+    document.getElementById('cutoff-viz').data = `./cutoff${selectedNumber}.svg`;
+    document.getElementById('boring-viz').data = `./boring${selectedNumber}.svg`;
+  });
+</script>
+</BaseLayout>
