@@ -1,0 +1,34 @@
+---
+import Spectacle from "../components/SpectacleCard.astro";
+
+interface Props {
+    num: Number;
+}
+
+const {num} = Astro.props;
+---
+<div class="viz-grid">
+  <h3> This is fish number {num} </h3>
+  <!-- <SpectacleCard -->
+  <!--   name= "barcode" -->
+  <!--   num= {num} -->
+  <!--   heading = "Barcode" -->
+  <!-- /> -->
+  <!-- <SpectacleCard -->
+  <!--   name= "spiral" -->
+  <!--   num= {num} -->
+  <!--   heading = "Spiral" -->
+  <!-- /> -->
+  <!-- <SpectacleCard -->
+  <!--   name= "barcode" -->
+  <!--   num= {num} -->
+  <!--   heading = "Cutoff of spec" -->
+  <!-- /> -->
+  <!-- <SpectacleCard -->
+  <!--   name= "barcode" -->
+  <!--   num= {num} -->
+  <!--   heading = "Cutoff of spec with embeddings" -->
+  <!-- /> -->
+
+</div>
+

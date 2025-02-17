@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+   name: string;
+num: Number;
+heading: string;
+
+}
+const {name, num, heading} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.svg');
+const imagePath = `/src/assets/${name}${num}.svg`
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+---
+
+<style>
+  .viz-card {
+    border: 1px solid rgba(88, 46, 28, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+.dark .viz-card{
+    background-color: #123123;
+  }
+</style>
+
+<div class="card" class="viz-card">
+    <h3>{heading}</h3>
+    <Image src={images[imagePath]()} alt={name} />
+</div>

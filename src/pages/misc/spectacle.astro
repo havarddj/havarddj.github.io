@@ -1,14 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpecDeck from '../../components/SpecDeck.astro';
+
 const pageTitle = "Gaga pictures for number fields"
-import './spec.css';
+
 ---
 <BaseLayout>
 <h2>Gaga pictures for number fields<h2/>
-<style>
-* + * {
-    margin-top: 0em;
-}
+
+  <style>
+  .viz-card {
+    border: 1px solid rgba(88, 46, 28, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
 
   .viz-container {
     max-width: 1200px;
@@ -30,51 +38,8 @@ import './spec.css';
     background-color: black;
     color: white;
   }
-
-  .viz-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  @media (min-width: 768px) {
-    .viz-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .viz-card {
-    border: 1px solid rgba(88, 46, 28, 0.2);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-  }
-
-.dark .viz-card{
-    background-color: #123123;
-  }
-
-  .viz-title {
-    margin-bottom: 1rem;
-    color: #582e1c;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  .viz-content {
-    aspect-ratio: 1;
-    flex-grow: 1;
-  }
-
-  .viz-svg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
 </style>
-
+  
 <div class="viz-container">
   <select class="dataset-selector" id="datasetSelect">
     <option value="1">1.1.1.1</option>
@@ -84,43 +49,45 @@ import './spec.css';
     <option value="5">45.1.246012870627780535441003976786240313709044401656133556774425683161984460829.1</option>
   </select>
 
-<div class="viz-grid">
-    <div class="viz-card">
-      <h3 class="viz-title">Barcode</h3>
-      <div class="viz-content">
-        <object class="viz-svg" id="barcode-viz" type="image/svg+xml" data="barcode1.svg"></object>
-      </div>
-    </div>
-    <div class="viz-card">
-      <h3 class="viz-title">Spiral</h3>
-      <div class="viz-content">
-        <object class="viz-svg" id="spiral-viz" type="image/svg+xml" data="spiral1.svg"></object>
-      </div>
-    </div>
-    <div class="viz-card">
-      <h3 class="viz-title">Cutoff of spec</h3>
-      <div class="viz-content">
-        <object class="viz-svg" id="cutoff-viz" type="image/svg+xml" data="cutoff1.svg"></object>
-      </div>
-    </div>
-    <div class="viz-card">
-      <h3 class="viz-title">Cutoff of spec with embeddings</h3>
-      <div class="viz-content">
-        <object class="viz-svg" id="boring-viz" type="image/svg+xml" data="boring1.svg"></object>
-      </div>
-    </div>
-  </div>
 </div>
 
-<script is:inline>
-  document.getElementById('datasetSelect').addEventListener('change', function(e) {
-    const selectedNumber = e.target.value;
-    
-    // Update each visualization with the new dataset number
-    document.getElementById('barcode-viz').data = `/misc/barcode${selectedNumber}.svg`;
-    document.getElementById('spiral-viz').data = `/misc/spiral${selectedNumber}.svg`;
-    document.getElementById('cutoff-viz').data = `/misc/cutoff${selectedNumber}.svg`;
-    document.getElementById('boring-viz').data = `/misc/boring${selectedNumber}.svg`;
+  <div class="visible" id="viz1">
+    <SpecDeck num={1} >
+  </div>
+  <div class="hidden" id="viz2">
+    <SpecDeck num={2} >
+  </div>
+
+  <div class="hidden" id="viz3">
+    <SpecDeck num={3} >
+  </div>
+  <div class="hidden" id="viz4">
+    <SpecDeck num={4} >
+  </div>
+  <div class="hidden" id="viz5">
+    <SpecDeck num={5} >
+  </div>
+
+<script>
+  const decks = document.querySelectorAll('[id^=viz]')
+datasetSelect.addEventListener('change', (event) => {
+  const selectedNumber = event.target.value;
+  console.log("Button clicked!")
+  decks.forEach(variant => {
+    <!-- console.log(`found variant ${variant} and you ${selectedNumber}`) -->
+    const num = Number(variant.id.slice(-1))
+    console.log(`You clicked ${selectedNumber} and ID of current html element is ${num}`)
+    if (num == selectedNumber) {
+      variant.classList.remove('hidden');
+      variant.classList.add('visible');
+      console.log(`Made ${variant} visible`)
+    } else {
+      variant.classList.remove('visible');
+      variant.classList.add('hidden');
+      console.log(`Made ${variant} invisible`)
+
+    }
   });
+});
 </script>
 </BaseLayout>
