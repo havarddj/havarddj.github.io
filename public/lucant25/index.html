@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			  <section>
+			    <img src="https://havarddj.github.io/_astro/x7_41.BCaf8ZfF_85BQb.svg">
+			    <h2>Portraits of Number Fields</h2>
+			    Håvard Damm-Johnsen
+			    <br>
+			    University of Gothenburg
+
+			  </section>
+				<!-- <section>Slide 2</section> -->
+				<section data-markdown data-separator="===" data-separator-vertical="---">
+				  <textarea data-template>
+				    ### Portraits in LMFDB
+				    ---
+				    Many objects in the lmfdb have portraits
+				    <img src="https://havarddj.github.io/_astro/x7_41.BCaf8ZfF_85BQb.svg">
+
+				    ===
+				    ## Spectrum of a ring 
+				    - Let $R$ be a ring. <!-- .element: class="fragment" data-fragment-index="1" -->
+				    $$ \operatorname{Spec} R = \\{ \mathfrak{p} \leq R : \mathfrak{p} \text{ is prime} \\} $$ <!-- .element: class="fragment" data-fragment-index="2" -->
+				    - e.g. $\operatorname{Spec} \mathbb Z = \\{(0), (2), (3), (5) \ldots\\} $ <!-- .element: class="fragment" data-fragment-index="3" -->
+
+
+				    ===
+				    To include:
+				    - original Spec OK picture
+				    - first dots, then draw lines 
+				    - demo of initial version (ipython notebook)
+				    - based on pytikz (say something about this)
+				    - lmfdb number fields: need something browser-friendly
+				    - svg.py - example of code 
+				    - Passport picture 
+				    - Link to lmfdb page
+				    
+				    Include link to slides on website, and links to software
+				    Upload to website?
+				    Formatting: find template?
+				    
+				  </textarea>				  
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+			    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+			});
+		</script>
+	</body>
+</html>
