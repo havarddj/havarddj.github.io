@@ -1,0 +1,56 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <title>{title}</title>
+
+    <link rel="stylesheet" href="/reveal-assets/reset.css" />
+    <link rel="stylesheet" href="/reveal-assets/reveal.css" />
+    <link rel="stylesheet" href="/reveal-assets/theme/white.css" id="theme" /> 
+
+    <link rel="stylesheet" href="/reveal-assets/plugin/highlight/monokai.css" />
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <slot />
+        </div>
+    </div>
+
+    <script src="/reveal-assets/reveal.js" is:inline></script>
+
+    <script src="/reveal-assets/plugin/notes/notes.js" is:inline></script>
+    <script src="/reveal-assets/plugin/markdown/markdown.js" is:inline></script>
+    <script src="/reveal-assets/plugin/highlight/highlight.js" is:inline></script>
+    <script src="/reveal-assets/plugin/math/math.js" is:inline></script>
+
+    <script is:inline>
+        // Initialize Reveal.js
+        Reveal.initialize({
+            hash: true,
+
+            plugins: [
+                RevealMarkdown,
+                RevealHighlight,
+                RevealNotes,
+                RevealMath.MathJax3
+            ]
+        });
+    </script>
+</body>
+</html>

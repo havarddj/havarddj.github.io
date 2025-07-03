@@ -1,0 +1,97 @@
+---
+import RevealLayout from '../../layouts/RevealLayout.astro';
+---
+
+<RevealLayout title="Portraits of Number Fields">
+
+<section>
+<img src="https://havarddj.github.io/_astro/x7_41.BCaf8ZfF_85BQb.svg">
+<h2>Portraits of Number Fields</h2>
+Håvard Damm-Johnsen
+<br>
+University of Gothenburg
+
+</section>
+<!-- <section>Slide 2</section> -->
+<!-- NB! is:raw is essential to avoid complications with curly brakcets -->
+<section data-markdown data-separator="===" data-separator-vertical="---" is:raw>
+<textarea data-template>
+### Portraits in LMFDB
+---
+Many objects in the lmfdb have portraits
+<img src="https://havarddj.github.io/_astro/x7_41.BCaf8ZfF_85BQb.svg">
+
+===
+## Spectrum of a ring
+Let $R$ be a ring.<!-- .element: class="fragment" data-fragment-index="1" -->
+
+$\operatorname{Spec} R = \\{\mathfrak p \leq R  : \mathfrak p \text{ is prime}\\}$<!-- .element: class="fragment" data-fragment-index="2" -->
+
+e.g. $\operatorname{Spec} \mathbb Z = \\{(0), (2), (3), (5) \ldots\\} $ <!-- .element: class="fragment" data-fragment-index="3" -->
+
+---
+## $\operatorname{Spec} \mathbb Z$
+
+===
+## Drawspec (version 1)
+- Uses [`pytikz`](https://github.com/allefeld/pytikz), a python interface to `tikz`
+- <a target="_blank" rel="noopener noreferrer" href="https://github.com/havarddj/drawspec/blob/main/Drawing%20spectra%20of%20number%20fields.ipynb"> Jupyter notebook </a>
+
+===
+## Problem: Can't compile tikz in the browser!
+
+===
+
+## Drawspec (version 2)
+- Uses [`svg.py`](https://github.com/orsinium-labs/svg.py), a python library to generate SVG files
+- SVG = "Scalable Vector Graphics" - vectorized images 
+- Infinite "resolution"
+<style>
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+    width: 100%
+}
+</style>
+<div class="container">
+<div class="col" data-markdown>
+<pre> <code> <path class="moon" d="M21 12.79A9 9 0 1111.21 3
+7 7 0 0021 12.79z" />
+</code>
+</pre>
+</div>
+<div class="col" >
+<svg class="fill:none" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+    </svg>
+</div>
+</div>
+===
+
+
+## What about the Lady Gaga box?
+
+=== 
+To include:
+- original Spec OK picture
+- first dots, then draw lines 
+- demo of initial version (ipython notebook)
+- based on pytikz (say something about this)
+- svg.py - example of code
+- lmfdb number fields: need something browser-friendly
+- Passport picture 
+- Link to lmfdb page
+- Thank people who helped out
+
+Include link to slides on website, and links to software
+
+Upload to website?
+
+Formatting: find template?
+
+</textarea>				  
+</section>
+</RevealLayout>
