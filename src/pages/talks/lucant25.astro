@@ -1,5 +1,10 @@
 ---
 import RevealLayout from '../../layouts/RevealLayout.astro';
+import { Image } from 'astro:assets';
+import ec_portrait from '';
+import mf_portrait from '../../assets/lucant25/lmfdb_mf.png';
+import grp_portrait from '../../assets/lucant25/lmfdb_grp.png';
+
 ---
 
 <RevealLayout title="Portraits of Number Fields">
@@ -19,78 +24,132 @@ University of Gothenburg
 ### Portraits in LMFDB
 ---
 Many objects in the lmfdb have portraits
-<img src="https://havarddj.github.io/_astro/x7_41.BCaf8ZfF_85BQb.svg">
+
+<img style="width: 200px; margin: 20px;" src="/lucant25/lmfdb_mf.png" alt="mf portrait"><!-- .element: class="fragment" data-fragment-index="1" -->
+<img style="width: 200px; margin: 20px;" src="/lucant25/lmfdb_ec.png" alt="ec portrait"><!-- .element: class="fragment" data-fragment-index="2" -->
+<img style="width: 200px; margin: 20px;" src="/lucant25/lmfdb_grp.png" alt="grp portrait"><!-- .element: class="fragment" data-fragment-index="3" -->
+
+---
+Ideally, should be generated on the fly
+
+_What does a number field look like?_<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ===
 ## Spectrum of a ring
 Let $R$ be a ring.<!-- .element: class="fragment" data-fragment-index="1" -->
 
-$\operatorname{Spec} R = \\{\mathfrak p \leq R  : \mathfrak p \text{ is prime}\\}$<!-- .element: class="fragment" data-fragment-index="2" -->
+$\operatorname{Spec} R = \\{ \text{ prime ideals } \mathfrak p \leq R  \\}$<!-- .element: class="fragment" data-fragment-index="2" -->
 
 e.g. $\operatorname{Spec} \mathbb Z = \\{(0), (2), (3), (5) \ldots\\} $ <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 ## $\operatorname{Spec} \mathbb Z$
 
-===
-## Drawspec (version 1)
-- Uses [`pytikz`](https://github.com/allefeld/pytikz), a python interface to `tikz`
-- <a target="_blank" rel="noopener noreferrer" href="https://github.com/havarddj/drawspec/blob/main/Drawing%20spectra%20of%20number%20fields.ipynb"> Jupyter notebook </a>
+  <div style="display: inline-grid; width: 100%; justify-items: center;">
+      <img style="width: 50%; grid-area: 1 / 1" src="/lucant25/specZ_noline.svg" alt="Spectrum of the integers"><!-- .element: class="fragment" data-fragment-index="1" -->
+      <img style="width: 50%; grid-area: 1 / 1"" src="/lucant25/specZ.svg" alt="Spectrum of the integers"><!-- .element: class="fragment" data-fragment-index="2" -->
+  </div>
+    ---
+    
+## $\operatorname{Spec} \mathbb Z [i]$
 
+<img style="width: 60%; " src="/lucant25/specZi.png" alt="Spectrum of the Gaussian integers">
+
+---
+## Inspiration: Mumford's $\operatorname{Spec} \mathbb Z [x]$
+
+<img style="width: 60%; " src="/lucant25/mumford.png" alt="Mumford's drawing of Spec Z[x]">
+
+
+
+===
+## [Drawspec v1 (2023)](https://github.com/havarddj/drawspec/)
+- &shy;<!-- .element: class="fragment" --> Draws $\operatorname{Spec} \mathcal{O}_F$ for any number field $F$<div data-markdown>
+- &shy;<!-- .element: class="fragment" --> Combines [`pytikz`](https://github.com/allefeld/pytikz), a python interface to `tikz`, with `sage`.
+- &shy;<!-- .element: class="fragment" --> <a target="_blank" rel="noopener noreferrer" href="https://github.com/havarddj/drawspec/blob/main/Drawing%20spectra%20of%20number%20fields.ipynb"> Jupyter notebook </a>
+
+<img style="width: 90%" src="/lucant25/drawspec1_scrot.png"><!-- .element: class="fragment" -->
+
+  ---
+  ### Another example of `pytikz`:
+<img style="width: 60%" src="/lucant25/X0(p).png">
+
+  (~40 loc, from the <a href="https://ems.press/books/mlm/297">Eigenvarieties book </a>)
 ===
 ## Problem: Can't compile tikz in the browser!
 
 ===
 
-## Drawspec (version 2)
-- Uses [`svg.py`](https://github.com/orsinium-labs/svg.py), a python library to generate SVG files
-- SVG = "Scalable Vector Graphics" - vectorized images 
-- Infinite "resolution"
-<style>
+## [Drawspec v2 (2025)](https://github.com/LMFDB/lmfdb/blob/main/lmfdb/number_fields/draw_spectrum.py)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --> Uses [`svg.py`](https://github.com/orsinium-labs/svg.py), a python library to generate SVG files
+- SVG = Scalable Vector Graphics - vectorized images<!-- .element: class="fragment" data-fragment-index="2" -->
 
-.container{
-    display: flex;
-}
-.col{
-    flex: 1;
-    width: 100%
-}
-</style>
-<div class="container">
-<div class="col" data-markdown>
-<pre> <code> <path class="moon" d="M21 12.79A9 9 0 1111.21 3
-7 7 0 0021 12.79z" />
-</code>
-</pre>
+<div style="display: flex; gap: 1px;">
+<div data-markdown style="width: 60%; margin:auto 5%; ">
+  <pre>
+    <code style="white-space: pre-wrap;"><svg width="24" height="24"
+     xmlns="http://www.w3.org/2000/svg">
+    <path class="moon"
+	d="M21 12.79 A9 9 0 1111.21 3
+	7 7 0 0 0 21 12.79">
+    </path>
+</svg></code>
+</pre><!-- .element: class="fragment" data-fragment-index="3" -->
 </div>
-<div class="col" >
-<svg class="fill:none" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-    </svg>
+<div style="margin: auto 10%; transform: scale(1.5)">
+<svg width="24" height="24"
+     xmlns="http://www.w3.org/2000/svg">
+    <path class="moon"
+	d="M21 12.79 A9 9 0 1111.21 3
+	7 7 0 0 0 21 12.79">
+    </path>
+</svg></div><!-- .element: class="fragment" data-fragment-index="4" -->
 </div>
-</div>
+
+---
+<img src="/lucant25/drawspec2_spec.svg">
+
+- Color corresponds to ramification index
+- Size corresponds to degree of residue field
+
 ===
 
+## Picture in the properties box?
 
-## What about the Lady Gaga box?
+  <div style="display: flex;">
+<img style="width: 200px; margin: 20px;" src="/misc/cutoff5.svg" alt="nf portrait 1"><!-- .element: class="fragment" data-fragment-index="1" -->
+<img style="width: 200px; margin: 20px;" src="/misc/boring5.svg" alt="nf portrait 2"><!-- .element: class="fragment" data-fragment-index="2" -->
+<img style="width: 200px; margin: 20px;" src="/misc/barcode5.svg" alt="nf portrait 3"><!-- .element: class="fragment" data-fragment-index="3" -->
+<img style="width: 200px; margin: 20px;" src="/misc/spiral5.svg" alt="nf portrait 4"><!-- .element: class="fragment" data-fragment-index="4" -->
+</div>
 
-=== 
-To include:
-- original Spec OK picture
-- first dots, then draw lines 
-- demo of initial version (ipython notebook)
-- based on pytikz (say something about this)
-- svg.py - example of code
-- lmfdb number fields: need something browser-friendly
-- Passport picture 
-- Link to lmfdb page
-- Thank people who helped out
+===
 
-Include link to slides on website, and links to software
+## <a href="https://www.lmfdb.org/NumberField/7.1.3911915096945863.1"> Spectra in the LMFDB </a>
 
-Upload to website?
+<img style="width: 25%" src="/lucant25/lmfdb_nf.png">  
 
-Formatting: find template?
+  ===
+
+  ## Thanks to:
+  - The LMFDB team for helpful discussion
+  - James Taylor & Jay Swar for brainstorming
+<!-- To include: -->
+<!-- - original Spec OK picture -->
+<!-- - first dots, then draw lines  -->
+<!-- - demo of initial version (ipython notebook) -->
+<!-- - based on pytikz (say something about this) -->
+<!-- - svg.py - example of code -->
+<!-- - lmfdb number fields: need something browser-friendly -->
+<!-- - Passport picture  -->
+<!-- - Link to lmfdb page -->
+<!-- - Thank people who helped out -->
+
+<!-- Include link to slides on website, and links to software -->
+
+<!-- Upload to website? -->
+
+<!-- Formatting: find template? -->
 
 </textarea>				  
 </section>
