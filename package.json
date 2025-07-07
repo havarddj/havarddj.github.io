@@ -14,7 +14,6 @@
     "dayjs": "^1.11.12",
     "katex": "^0.16.11",
     "rehype-katex": "^7.0.0",
-    "remark-math": "^6.0.0",
-    "reveal.js": "^5.2.1"
+    "remark-math": "^6.0.0"
   }
 }
