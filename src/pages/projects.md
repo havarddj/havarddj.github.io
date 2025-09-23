@@ -1,5 +1,5 @@
 + [drawspec](https://github.com/havarddj/drawspec) \
-A simple script building on [pytikz](https://github.com/allefeld/pytikz) to draw the spectrum of the ring of integers in a number field. Conveniently, this also generates tikz code for use in LaTeX documents.
+A simple script building on [pytikz](https://github.com/allefeld/pytikz) to draw the spectrum of the ring of integers in a number field. Conveniently, this also generates tikz code for use in LaTeX documents. A version of this is included in the LMFDB, see  [example](https://www.lmfdb.org/NumberField/7.1.3911915096945863.1) and [slides](/talks/lucant25).
 	    
 + [typst-preview.el](https://github.com/havarddj/typst-preview.el) \
 An Emacs package for live preview of [Typst](https://typst.app/), a modern LaTeX alternative.
