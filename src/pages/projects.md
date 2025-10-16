@@ -7,5 +7,8 @@ An Emacs package for live preview of [Typst](https://typst.app/), a modern LaTeX
 + [tree-sitter-sage](https://github.com/havarddj/tree-sitter-sage) \
 A tree-sitter grammar for SageMath, which is a slight modification of [tree-sitter-python](https://github.com/tree-sitter/tree-sitter-python).
 
++ [tree-sitter-magma](https://github.com/edgarcosta/tree-sitter-magma/ \
+A tree-sitter grammar for hte [magma](https://magma.maths.usyd.edu.au/magma/) computer algebra system.
+
 + [WCLvsSCL](https://github.com/havarddj/WCLvsSCL) \
 Some code for computing the probabilistic zeta function of a finite poset lattice. Includes code which disproves a conjecture in (a previous version of) [arxiv:2112.13766](https://arxiv.org/abs/2112.13766). 
