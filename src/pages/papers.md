@@ -1,5 +1,5 @@
 1. **On a theorem of Rickards** \
-_Preprint_ <[pdf](/rickards_paper_arxiv_v1.pdf)>\
+_Preprint_ <[pdf](/rickards_paper_arxiv_v1.pdf)|[arxiv](https://arxiv.org/abs/2510.26655)>\
 [James Rickards](https://jamesrickards-canada.github.io/) proved that
 the generating series of intersection numbers of real quadratic
 geodesics on indefinite Shimura curves are elliptic modular forms. We
